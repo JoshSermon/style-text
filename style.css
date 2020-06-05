@@ -8,18 +8,36 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-.page-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    min-height: 100vh;
-    background-color: #222222;
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #222222;
 }
 
-.swipe-in-text{
-    position: relative;
+.swipe-in-text {
+  position: relative;
 }
 
-h1
+&:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 90%;
+  width: 0%;
+  bottom: 0;
+  z-index: 1;
+  background-color: #ff5858;
+}
+
+.text {
+  color: #ffffff;
+  font-size: 72px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
