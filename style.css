@@ -28,11 +28,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  right: 90%;
+  right: 100%;
   width: 0%;
   bottom: 0;
   z-index: 1;
   background-color: #ff5858;
+  animation: swipe-in-text 1s ease-out 1s forwards;
 }
 
 .text {
@@ -40,4 +41,37 @@ body {
   font-size: 72px;
   font-weight: 900;
   text-transform: uppercase;
+  opacity: 0;
+  animation: fade-in-text 0.01s linear 1.5s forwards;
+}
+
+&.small {
+  font-size: 32;
+  font-weight: 500;
+}
+
+@keyframes .swipe-in-text {
+  0% {
+    width: 0%;
+    right: 100%;
+    left: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+    right: 0%;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+
+@keyframes fade-in-text {
+  form {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
